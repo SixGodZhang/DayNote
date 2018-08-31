@@ -1,0 +1,59 @@
+//
+System.Enviroment.GetCommandLineArgs()
+
+//csc /m 入口类名  指定程序的入口
+
+//
+System.IO.Path.DirectorySeparatorChar
+
+//
+hashCode的值域平台相关，两个对象如果相等，则他们的hashcode一定相等;反之，则不一定成立
+
+//
+判断两个变量是不是属于同一个实例，可以用一下方法:
+Object.ReferenceEquals(obj1,obj2);
+
+//ref out
+
+//
+可变参数数组
+param string[] args
+
+//可选参数
+可选参数的使用，选择性进行赋值调用
+
+//重载方法
+当实例调用类中的一个方法时，类中有两个"适用的方法",采取哪一个方法？
+采用的是更具体的派生类型的方法
+
+//异常
+try...catch...finally
+自定义异常
+捕捉非CLS异常
+https://docs.microsoft.com/zh-cn/dotnet/csharp/programming-guide/exceptions/how-to-catch-a-non-cls-exception
+
+
+//扩展方法
+https://docs.microsoft.com/zh-cn/dotnet/csharp/programming-guide/classes-and-structs/extension-methods
+
+//is as
+
+//
+接口只包含方法、事件、属性、索引器
+接口可以由类和结构体来实现
+实现接口的类可以显示实现该接口的成员。显示实现的成员不能通过类的实例访问，而只能通过接口的实例访问
+尽量避免显示实现接口
+
+//
+IL指令：
+https://msdn.microsoft.com/zh-tw/library/dd229211.aspx
+
+//
+待研究的问题
+多线程、LinQ表达式
+
+//
+表面可变的值类型
+
+//
+泛型 T 占位符

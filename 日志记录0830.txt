@@ -1,0 +1,19 @@
+难点：
+1.项目过大，打包过程过于繁琐
+2.外网svn无法查看日志，文件有冗余/丢失情况
+
+
+//SVN
+
+清理
+svn cleanup
+--remove-versioned 移除未受版本控制的文件
+--remove-ignored 移除忽略的文件
+
+
+更新,并且使用服务器版本来解决冲突
+svn update --accept tf
+
+//
+
+将 Plugins\MobileMovieTexture 移动到 Scripts\目录下

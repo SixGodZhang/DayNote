@@ -1,0 +1,56 @@
+//
+强引用和弱引用
+如果强引用存在的话，GC是不会回收对象的。弱引用可以保持对对象的引用，同时允许GC在必要时释放对象，回收内存.
+
+需要注意的是，在使用弱引用的时候会有弱引用转换强引用这一步,我们需要做一次Null值判断（对象可能被GC回收）
+
+//
+.Net FrameWork源码
+https://referencesource.microsoft.com/
+
+//
+HashSet/SortedSet 
+不能存重复的值
+在写入(Add)的时候,HashSet的效率要比List的效率低,因为HashSet在Add的时候,都要进行一次遍历,判断自身集合中已存在该值
+List<T>
+泛型模板类,底层实现是数组,数组可以通过capcity进行扩容,实际上是比较消耗性能的一种操作(如果增加一个元素之后,总长度大于之前的总长度,则需要
+对List底层的数组进行扩容,扩容实际上就是把一个数组Copy到另外一个数组中)
+ArrayList
+底层实现是Object数组,涉及到装箱和拆箱,优势在于可以存不同类型的数据
+LinkedList
+底层是双向循环列表
+HashTable
+https://blog.csdn.net/exiaojiu/article/details/51206024
+用的是双哈希来解决冲突
+/////////////////////////////////////////////////////////////////////////////////
+Hi=(Hash(key)+i*ReHash(key)) mod m (i=1，2，……，m-1) 
+其中： 
+Hash(key)，ReHash(key)是两个哈希函数， 
+m 为哈希表长度 
+步骤： 
+双哈希函数探测法，先用第一个函数Hash(key)对关键码计算哈希地址，一旦产生地址冲突，再用第二个函数ReHash(key)确定移动的步长因子，最后，通过步长因子序列由探测函数寻找空的哈希地址。
+
+h(i,k) = (h1(k) + h2(k)*i) mod m
+
+为什么要求h2(k)与m互质?
+
+比如，Hash(key)=a 时产生地址冲突，就计算ReHash(key)=b，则探测的地址序列为 
+H1=(a+b) mod m，H2=(a+2b) mod m，……，Hm-1=(a+(m-1)b) mod m
+/////////////////////////////////////////////////////////////////////////////////
+Dictionary
+
+//条件协定
+ Contract.Requires(bool,string)
+
+//断言
+Debug.Assert()
+https://www.cnblogs.com/Javi/p/6794660.html
+
+//集合
+https://www.cnblogs.com/jesse2013/p/CollectionsInCSharp.html#b01
+
+//
+IEnumrable和IEnumrator
+
+//
+volatile:指令关键字,确保本条指令不会因为编译器的优化而省略
